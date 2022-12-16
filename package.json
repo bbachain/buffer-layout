@@ -1,6 +1,6 @@
 {
-  "name": "@solana/buffer-layout",
-  "version": "4.0.1",
+  "name": "@bbachain/buffer-layout",
+  "version": "0.0.1",
   "description": "Translation between JavaScript values and Buffers",
   "keywords": [
     "Buffer",
@@ -8,11 +8,11 @@
     "endian",
     "pack data"
   ],
-  "homepage": "https://github.com/solana-labs/buffer-layout",
-  "bugs": "https://github.com/solana-labs/buffer-layout/issues",
+  "homepage": "https://github.com/bbachain/buffer-layout",
+  "bugs": "https://github.com/bbachain/buffer-layout/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/solana-labs/buffer-layout.git"
+    "url": "https://github.com/bbachain/buffer-layout.git"
   },
   "license": "MIT",
   "author": "Peter A. Bigot <pab@pabigot.com>",

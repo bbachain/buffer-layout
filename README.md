@@ -1,10 +1,10 @@
-# @solana/buffer-layout
+# @bbachain/buffer-layout
 
-`@solana/buffer-layout` is a TypeScript fork of `buffer-layout`. Same API, just adds types and TypeScript docs.
+`@bbachain/buffer-layout` is a TypeScript fork of `buffer-layout`. Same API, just adds types and TypeScript docs.
 
 ## Installation
 
-Install with `npm install @solana/buffer-layout`.
+Install with `npm install @bbachain/buffer-layout`.
 
 Development and testing is done using Node.js, supporting versions 5.10
 and later.
