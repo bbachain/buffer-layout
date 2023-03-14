@@ -11,13 +11,13 @@ and later.
 
 # buffer-layout
 
-[![NPM version](https://img.shields.io/npm/v/buffer-layout.svg)](https://www.npmjs.com/package/buffer-layout "View this project on NPM")
-[![Build Status](https://travis-ci.org/pabigot/buffer-layout.svg?branch=master)](https://travis-ci.org/pabigot/buffer-layout "Check build status on TravisCI")
-[![Coverage Status](https://coveralls.io/repos/pabigot/buffer-layout/badge.svg?branch=master&service=github)](https://coveralls.io/github/pabigot/buffer-layout?branch=master "Check coverage status on Coveralls")
+[![NPM version](https://img.shields.io/npm/v/buffer-layout.svg)](https://www.npmjs.com/package/@bbachain/buffer-layout "View this project on NPM")
+[![Build Status](https://travis-ci.org/bbachain/buffer-layout.svg?branch=main)](https://travis-ci.org/bbachain/buffer-layout "Check build status on TravisCI")
+[![Coverage Status](https://coveralls.io/repos/bbachain/buffer-layout/badge.svg?branch=main&service=github)](https://coveralls.io/github/bbachain/buffer-layout?branch=main "Check coverage status on Coveralls")
 
 buffer-layout is a utility module implemented in pure JavaScript that
 supports translations between JavaScript values and Buffers.  It is made
-available through [github](https://github.com/pabigot/buffer-layout) and
+available through [github](https://github.com/bbachain/buffer-layout) and
 released under the MIT license.
 
 Layout support is provided for these types of data:
@@ -48,11 +48,11 @@ following context:
 
 The examples give only a taste of what can be done.  Structures, unions,
 and sequences can nest; [union
-discriminators](http://pabigot.github.io/buffer-layout/module-Layout-UnionDiscriminator.html)
+discriminators](http://bbachain.github.io/buffer-layout/module-Layout-UnionDiscriminator.html)
 can be within the union or external to it; sequence and blob lengths may
 be fixed or read from the buffer.
 
-For full details see the [documentation](http://pabigot.github.io/buffer-layout/).
+For full details see the [documentation](http://bbachain.github.io/buffer-layout/).
 
 ### Four-element array of 16-bit signed little-endian integers
 
@@ -68,8 +68,8 @@ The buffer-layout way:
     assert.equal(Buffer.from('0100ffff0300fdff', 'hex').compare(b), 0);
     assert.deepEqual(ds.decode(b), [1, -1, 3, -3]);
 
-See [Int](http://pabigot.github.io/buffer-layout/module-Layout-Int.html)
-and [Sequence](http://pabigot.github.io/buffer-layout/module-Layout-Sequence.html).
+See [Int](http://bbachain.github.io/buffer-layout/module-Layout-Int.html)
+and [Sequence](http://bbachain.github.io/buffer-layout/module-Layout-Sequence.html).
 
 ### A native C `struct` on a 32-bit little-endian machine
 
@@ -95,9 +95,9 @@ The buffer-layout way:
 Note that the C language requires padding which must be explicitly added
 in the buffer-layout structure definition.  Since the padding is not
 accessible, the corresponding layout has no
-[property](http://pabigot.github.io/buffer-layout/module-Layout-Layout.html#property).
+[property](http://bbachain.github.io/buffer-layout/module-Layout-Layout.html#property).
 
-See [Structure](http://pabigot.github.io/buffer-layout/module-Layout-Structure.html).
+See [Structure](http://bbachain.github.io/buffer-layout/module-Layout-Structure.html).
 
 ### A packed C `struct` on a 32-bit little-endian machine
 
@@ -155,7 +155,7 @@ The buffer-layout way:
     assert.equal(s16.encode({s16: [123, -123]}, b), 1 + 2 * 2);
     assert.equal(Buffer.from('687b0085ff', 'hex').compare(b), 0);
 
-See [Union](http://pabigot.github.io/buffer-layout/module-Layout-Union.html).
+See [Union](http://bbachain.github.io/buffer-layout/module-Layout-Union.html).
 
 ### Decoding into class instances
 
@@ -210,9 +210,9 @@ Note that one variant (`'n'`) carries no data, leaving the remainder of
 the buffer unchanged when stored.
 
 See
-[Layout.makeDestinationObject()](http://pabigot.github.io/buffer-layout/module-Layout-Layout.html#makeDestinationObject)
+[Layout.makeDestinationObject()](http://bbachain.github.io/buffer-layout/module-Layout-Layout.html#makeDestinationObject)
 and
-[bindConstructorLayout](http://pabigot.github.io/buffer-layout/module-Layout.html#.bindConstructorLayout).
+[bindConstructorLayout](http://bbachain.github.io/buffer-layout/module-Layout.html#.bindConstructorLayout).
 
 ### Packed bit fields on a little-endian machine
 
@@ -239,7 +239,7 @@ The buffer-layout way:
     assert.deepEqual(ds.decode(b),
                      {b00l03: 3, flg03: true, b04l18: 24, b1Cl04: 4});
 
-See [BitStructure](http://pabigot.github.io/buffer-layout/module-Layout-BitStructure.html).
+See [BitStructure](http://bbachain.github.io/buffer-layout/module-Layout-BitStructure.html).
 
 ### 64-bit values as Numbers
 
@@ -260,7 +260,7 @@ Note that because the exact value is not less than 2^53 it cannot be
 represented as a JavaScript Number, and is instead approximated by a
 nearby representable integer that is equivalent within Numbers.
 
-See [NearUInt64](http://pabigot.github.io/buffer-layout/module-Layout-NearUInt64.html).
+See [NearUInt64](http://bbachain.github.io/buffer-layout/module-Layout-NearUInt64.html).
 
 ### A NUL-terminated C string
 
@@ -278,7 +278,7 @@ The buffer-layout way:
     assert.equal(Buffer.from('68692100', 'hex').compare(b.slice(0, slen)), 0);
     assert.equal(ds.decode(b), 'hi!');
 
-See [CString](http://pabigot.github.io/buffer-layout/module-Layout-CString.html).
+See [CString](http://bbachain.github.io/buffer-layout/module-Layout-CString.html).
 
 ### A fixed-length block of data offset within a buffer
 
@@ -288,7 +288,7 @@ The buffer-layout way:
     const b = Buffer.from('0102030405060708', 'hex');
     assert.equal(Buffer.from('03040506', 'hex').compare(ds.decode(b, 2)), 0);
 
-See [Blob](http://pabigot.github.io/buffer-layout/module-Layout-Blob.html).
+See [Blob](http://bbachain.github.io/buffer-layout/module-Layout-Blob.html).
 
 ### A variable-length array of pairs of C strings
 
@@ -309,7 +309,7 @@ The buffer-layout way:
                  .compare(b.slice(0, span)), 0);
     assert.deepEqual(st.decode(b), {n: 3, a: arr});
 
-See [OffsetLayout](http://pabigot.github.io/buffer-layout/module-Layout-OffsetLayout.html).
+See [OffsetLayout](http://bbachain.github.io/buffer-layout/module-Layout-OffsetLayout.html).
 
 ### A C flexible array member with implicit length
 

@@ -127,7 +127,7 @@
  * @module Layout
  * @license MIT
  * @author Peter A. Bigot
- * @see {@link https://github.com/pabigot/buffer-layout|buffer-layout on GitHub}
+ * @see {@link https://github.com/bbachain/buffer-layout|buffer-layout on GitHub}
  */
 
 'use strict';
