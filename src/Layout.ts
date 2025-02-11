@@ -57,7 +57,7 @@
  *   module:Layout.nu64|unsigned little-endian}, {@link
  *   module:Layout.nu64be|unsigned big-endian}, {@link
  *   module:Layout.ns64|signed little-endian}, and {@link
- *   module:Layout.ns64be|unsigned big-endian} encodings;
+ *   module:Layout.ns64be|signed big-endian} encodings;
  * * 32-bit floating point values with {@link
  *   module:Layout.f32|little-endian} and {@link
  *   module:Layout.f32be|big-endian} representations;
@@ -127,7 +127,7 @@
  * @module Layout
  * @license MIT
  * @author Peter A. Bigot
- * @see {@link https://github.com/bbachain/buffer-layout|buffer-layout on GitHub}
+ * @see {@link https://github.com/pabigot/buffer-layout|buffer-layout on GitHub}
  */
 
 'use strict';
